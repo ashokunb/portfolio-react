@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio-react/static/css/main.e28fe592.css",
+    "main.js": "/portfolio-react/static/js/main.7875c369.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio-react/static/js/787.1ed0c42c.chunk.js",
+    "static/media/profile image.jpg": "/portfolio-react/static/media/profile image.b1dd5d89458e443daed2.jpg",
+    "static/media/Run buddy.jpg": "/portfolio-react/static/media/Run buddy.f05fb799795dd9c3edb9.jpg",
+    "static/media/act like you been there.jpg": "/portfolio-react/static/media/act like you been there.0236c796ef5edb6f5a05.jpg",
+    "static/media/Work day schedular.jpg": "/portfolio-react/static/media/Work day schedular.aa2fce96517617ecb9e6.jpg",
+    "static/media/Weather Dashboard.jpg": "/portfolio-react/static/media/Weather Dashboard.ef479b3593570604fe77.jpg",
+    "static/media/ChatApp Live.jpg": "/portfolio-react/static/media/ChatApp Live.34d70b5b038d0e01acb3.jpg",
+    "static/media/password generator.jpg": "/portfolio-react/static/media/password generator.51bc0779fb47c19e00f7.jpg",
+    "index.html": "/portfolio-react/index.html",
+    "main.e28fe592.css.map": "/portfolio-react/static/css/main.e28fe592.css.map",
+    "main.7875c369.js.map": "/portfolio-react/static/js/main.7875c369.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio-react/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e28fe592.css",
+    "static/js/main.7875c369.js"
+  ]
+}
