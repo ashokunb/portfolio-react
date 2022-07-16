@@ -6,6 +6,7 @@ import About from "./components/About";
 import Nav from "./components/Nav";
 import Projects from "./components/Projects";
 import ContactForm from './components/Contact'
+import Resume from './components/Resume';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         
           <About></About>
           <Projects></Projects>
+          <Resume></Resume>
           <ContactForm></ContactForm>
       
         </section>
