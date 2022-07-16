@@ -19,8 +19,23 @@ function App() {
     { name: 'Resume' },
   ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [contactSelected, setContactSelected] = useState(false);
+  const [currentCategory, setCurrentCategory] = useState(categories[0].name);
+
+
+  function RenderPage() {
+    switch (currentCategory) {
+      case 'About me':
+        return  <About/>
+      case 'Projects':
+        return <Projects/>
+      case 'Contact Me':
+        return <ContactForm/>
+      case 'Resume':
+        return <Resume/>
+        default:
+          return  <About/>
+    }
+  }
 
   return (
     <div>
@@ -28,19 +43,20 @@ function App() {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}>
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
       </Nav>
 
-        <main className="columns has-text-white">
+        <main className=" has-text-white">
           
+          {currentCategory ? (
+            <>
+            {RenderPage()}
+            </>
+          ) : (
           <section className="column has-text-centered  m-5">
             <ContactForm></ContactForm>
-            <About></About>
-            <Projects></Projects>
-            <Resume></Resume>
-            <Footer></Footer>
           </section>
+          )}
+          <Footer/>
         </main>
       
     </div>

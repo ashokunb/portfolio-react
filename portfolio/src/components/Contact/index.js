@@ -31,21 +31,21 @@ function ContactForm() {
       }
     }
   };
-
+ 
   return (
-    <section className='field'>
+    <section className='field container pt-6' data-testid="h1tag">
       <h1 className='has-text-centered title m-6 has-text-black' data-testid="h1tag">Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
-          <label className='label' htmlFor="name">Name:</label>
+          <label className='label mt-4' htmlFor="name">Name:</label>
           <input className='input' type="text" name="name" defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
-          <label className='label' htmlFor="email">Email address:</label>
+          <label className='label mt-4' htmlFor="email">Email address:</label>
           <input className='input' type="email" name="email" defaultValue={email} onBlur={handleChange} />
         </div>
         <div>
-          <label className='label' htmlFor="message">Message:</label>
+          <label className='label mt-4' htmlFor="message">Message:</label>
           <textarea className='textarea' name="message" rows="5" defaultValue={message} onBlur={handleChange} />
         </div>
         {errorMessage && (
@@ -53,7 +53,7 @@ function ContactForm() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button className='button is-black' data-testid="button" type="submit">Submit</button>
+        <button className='button is-black mt-6' data-testid="button" type="submit">Submit</button>
       </form>
     </section>
   );
