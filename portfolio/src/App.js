@@ -21,16 +21,15 @@ function App() {
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
-    <hero>
       <div>
         <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}></Nav>
-      </div>
-      <div className="columns my-height is-vcentered has-text-white">
-        <section className="column has-text-centered is-half m-5">
-        
+      
+      <main>
+      <div className="columns has-text-white">
+        <section className="column has-text-centered  m-5">
           <About></About>
           <Projects></Projects>
           <Resume></Resume>
@@ -38,7 +37,8 @@ function App() {
       
         </section>
       </div>
-    </hero>
+    </main>
+    </div>
   );
 }
 

@@ -1,4 +1,6 @@
+import React from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
+
 
 
 function Nav(props) {
@@ -11,16 +13,8 @@ function Nav(props) {
 
   return (
     <header className="column has-background-light">
-      <h2>
-        <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
-        </a>
-      </h2>
-
-      <nav className="navbaris-transparent">
-        
+      <nav className="">
         <div id="navcontent" className="navbar-start mt-3">
-          
           {categories.map((category) => (
             <li
               className={`navbar-item navbar-menu ${
