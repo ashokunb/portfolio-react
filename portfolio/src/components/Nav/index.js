@@ -1,53 +1,46 @@
-import React from "react";
-
-function Nav() {
-    const categories = [
-        {
-            name:"About me",
-        },
-        {
-            name:"Projects",
-        },
-        {
-            name:"Contact Me",
-        },
-        {
-            name:"Resume",
-        },
-    ];
-
-    const handleClick = () => {
-        console.log("click handled")
-      }
+import { capitalizeFirstLetter } from '../../utils/helpers';
 
 
-    return (
-        <header >
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a href="#about" onClick={() => handleClick()}>
-              About me
-            </a>
-          </li>
-          <li className={"mx-2"}>
-            <span onClick={() => handleClick()}>
-              Contact
-            </span>
-          </li>
-          {
-            categories.map((category) => (
-              <li className="mx-1" key={category.name} >
-                <span onClick={() => { handleClick(); }}>
-                 {(category.name)}
-                </span>
-              </li>
-            ))
-          }
-        </ul>
+function Nav(props) {
+  
+  const {
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+  } = props;
+
+  return (
+    <header className="column has-background-light">
+      <h2>
+        <a data-testid="link" href="/">
+          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+        </a>
+      </h2>
+
+      <nav className="navbaris-transparent">
+        
+        <div id="navcontent" className="navbar-start mt-3">
+          
+          {categories.map((category) => (
+            <li
+              className={`navbar-item navbar-menu ${
+                currentCategory.name === category.name && 'navActive'
+                }`}
+              key={category.name}
+            >
+              <span
+                onClick={() => {
+                  setCurrentCategory(category);
+                }}
+              >
+                {capitalizeFirstLetter(category.name)}
+              </span>
+            </li>
+          ))}
+        </div>
       </nav>
-        </header>
-    )
+    </header>
+  );
 }
 
 export default Nav;

@@ -1,19 +1,38 @@
 //import logo from './logo.svg';
 //import './App.css';
-
+import React, { useState } from 'react';
+import 'bulma/css/bulma.min.css';
 import About from "./components/About";
 import Nav from "./components/Nav";
-import Projects from "./components/Projects/projects";
+import Projects from "./components/Projects";
+import ContactForm from './components/Contact'
 
 
 function App() {
+
+  const [categories] = useState([
+    {name: 'About me'},
+    { name: 'Projects'},
+    { name: 'Contact Me'},
+    { name: 'Resume'},
+  ]);
+
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+
   return (
     <hero>
-      <div class="columns my-height is-vcentered has-text-white">
-        <section class="column has-text-centered is-half m-5">
-          <Nav></Nav>
+      <div>
+        <Nav
+        categories={categories}
+        setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}></Nav>
+      </div>
+      <div className="columns my-height is-vcentered has-text-white">
+        <section className="column has-text-centered is-half m-5">
+        
           <About></About>
           <Projects></Projects>
+          <ContactForm></ContactForm>
       
         </section>
       </div>
@@ -26,8 +45,8 @@ export default App;
 //function App() {
 //   return (
 //     <hero>
-//       <div class="columns my-height is-vcentered has-text-white">
-//         <section class="column has-text-centered is-half m-5">
+//       <div classNameName="columns my-height is-vcentered has-text-white">
+//         <section classNameName="column has-text-centered is-half m-5">
           
 //         </section>
 //       </div>
