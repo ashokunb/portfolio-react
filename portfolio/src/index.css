@@ -59,7 +59,11 @@ nav li {
 }
 .my-height {
   background-color: black;
-  min-height: 100vh;
+  min-height: 85vh;
+}
+
+.min-height {
+  min-height: 85vh;
 }
 
 .image-box {

@@ -4,7 +4,7 @@ function Resume() {
 
 
     return (
-        <article id="resume-me" className=" p-6 has-background-light ">
+        <article id="resume-me" className=" p-6 has-background-light min-height">
             <div className="has-text-centered mb-6"><h2 className="title ">Resume</h2></div>
 
             <div className="columns is-flex-wrap-wrap is-justify-content-center card has-text-centered block">

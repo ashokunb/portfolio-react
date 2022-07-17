@@ -33,7 +33,7 @@ function ContactForm() {
   };
  
   return (
-    <section className='field container pt-6' data-testid="h1tag">
+    <section className='field container pt-6 min-height' data-testid="h1tag">
       <h1 className='has-text-centered title m-6 has-text-black' data-testid="h1tag">Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
